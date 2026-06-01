@@ -11,7 +11,9 @@ import os
 load_dotenv()
 
 # Initialize OpenAI client
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Use Streamlit secrets in production, os.getenv for local development
+api_key = st.secrets.get("OPENAI_API_KEY") if "OPENAI_API_KEY" in st.secrets else os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key)
 
 SYSTEM_PROMPT = """You are a horse racing operations assistant that structures updates precisely.
 
