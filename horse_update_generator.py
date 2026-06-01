@@ -14,8 +14,8 @@ if not api_key:
     st.stop()
 
 # Initialize OpenAI client with explicit api_key
-client = OpenAI(api_key=api_key)
-
+st.write("Available secrets:", list(st.secrets.keys()))
+api_key = st.secrets.get("OPENAI_API_KEY")
 SYSTEM_PROMPT = """You are a horse racing operations assistant that structures updates precisely.
 
 REQUIRED FIELDS BY EVENT TYPE:
