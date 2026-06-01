@@ -5,9 +5,17 @@ Converts unstructured horse updates into structured format for Slack listener.
 
 import streamlit as st
 from openai import OpenAI
+import os
+
+# Debug: Check if API key is set
+api_key_value = os.getenv("OPENAI_API_KEY")
+if api_key_value:
+    st.info(f"✓ API Key found: {api_key_value[:20]}...")
+else:
+    st.error("✗ OPENAI_API_KEY environment variable not set")
+    st.error(f"Available env vars: {list(os.environ.keys())}")
 
 # Initialize OpenAI client
-# Streamlit Cloud will inject this as an environment variable
 client = OpenAI()
 
 SYSTEM_PROMPT = """You are a horse racing operations assistant that structures updates precisely.
