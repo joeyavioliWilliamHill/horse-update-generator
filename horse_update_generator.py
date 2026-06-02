@@ -6,6 +6,8 @@ Converts unstructured horse updates into structured format for Slack listener.
 import streamlit as st
 from openai import OpenAI
 
+st.title("🚨 DEPLOYMENT TEST 6/2")
+
 # Debugging - verify secrets are loading
 st.write("Secrets keys:", list(st.secrets.keys()))
 
