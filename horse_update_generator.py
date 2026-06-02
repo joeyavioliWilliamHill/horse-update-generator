@@ -6,27 +6,16 @@ Converts unstructured horse updates into structured format for Slack listener.
 import streamlit as st
 from openai import OpenAI
 
-st.title("🚨 DEPLOYMENT TEST 6/2")
-
-# Debugging - verify secrets are loading
-st.write("Secrets keys:", list(st.secrets.keys()))
-
 try:
     api_key = st.secrets["OPENAI_API_KEY"]
-
-    st.success("✅ OPENAI_API_KEY found")
-    st.write(f"Key length: {len(api_key)}")
-    st.write(f"Contains newline: {'\\n' in api_key}")
-
     client = OpenAI(api_key=api_key)
-
 except KeyError:
-    st.error("❌ OPENAI_API_KEY not found in Streamlit Secrets")
+    st.error("OPENAI_API_KEY is missing from Streamlit Secrets.")
     st.stop()
-
 except Exception as e:
-    st.error(f"❌ Error initializing OpenAI client: {str(e)}")
+    st.error(f"Error initializing OpenAI client: {e}")
     st.stop()
+    
 SYSTEM_PROMPT = """You are a horse racing operations assistant that structures updates precisely.
 
 REQUIRED FIELDS BY EVENT TYPE:
