@@ -4,6 +4,9 @@ Converts unstructured horse updates into structured format for Slack listener.
 """
 
 import streamlit as st
+
+st.write("Secrets object:")
+st.write(dict(st.secrets))
 from openai import OpenAI
 
 # Get API key from Streamlit secrets
