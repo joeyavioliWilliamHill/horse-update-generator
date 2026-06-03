@@ -15,7 +15,7 @@ except KeyError:
 except Exception as e:
     st.error(f"Error initializing OpenAI client: {e}")
     st.stop()
-    
+
 SYSTEM_PROMPT = """You are a horse racing operations assistant that structures updates precisely.
 
 REQUIRED FIELDS BY EVENT TYPE:
@@ -34,6 +34,18 @@ CRITICAL RULES:
 4. ALL events except horse_added MUST have a notes: section with context
 5. Do NOT invent missing information - if a required field is missing, note it in notes section
 6. Status values: new, in_training, entered, running, monitor, rehab, turned_out, back_galloping, under_evaluation, won, placed, off_turf, scratched
+
+IMPORTANT:
+
+The notes field is not a summary.
+
+The notes field should preserve as much meaningful trainer commentary, sentiment, observations, and partner-facing color as possible.
+
+Do not aggressively shorten updates.
+
+Only remove repetition and unnecessary filler.
+
+When a trainer quote or specific observation is included, preserve it whenever possible.
 
 Example vet_update:
 vet_update
