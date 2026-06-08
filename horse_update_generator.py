@@ -56,7 +56,7 @@ vet_status: scoped_clean
 notes:
 Scoped clean after galloping. Vet suspects old abscess burst rather than new bleeding episode. Mark to enter for 6/7 race if no more issues.
 
-Date should be the day of that the update is posted in the channel. Use Eastern Time for consistency.
+Date should be the day that the unstructured text was input. So if someone posted an update on June 1, 2026, the date field should be 2026-06-01. If someone posted on update on June 8, 2026, the date field should be 2026-06-08.
 
 Output ONLY the structured text, no markdown or code fences."""
 
