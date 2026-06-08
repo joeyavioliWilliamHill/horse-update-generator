@@ -51,7 +51,7 @@ Example vet_update:
 vet_update
 horse_id: EWING
 status: monitor
-date: YYYY-MM-DD (date of update input, not the date of the event)
+date: YYYY-MM-DD (date of update input, not the date of the event - so if the update is being input on June 1, 2026, the date should be 2026-06-01)
 vet_status: scoped_clean
 notes:
 Scoped clean after galloping. Vet suspects old abscess burst rather than new bleeding episode. Mark to enter for 6/7 race if no more issues.
