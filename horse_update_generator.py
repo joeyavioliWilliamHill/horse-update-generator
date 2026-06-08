@@ -56,6 +56,8 @@ vet_status: scoped_clean
 notes:
 Scoped clean after galloping. Vet suspects old abscess burst rather than new bleeding episode. Mark to enter for 6/7 race if no more issues.
 
+Date should be the day of that the update is posted in the channel. Use Eastern Time for consistency.
+
 Output ONLY the structured text, no markdown or code fences."""
 
 # Page config
