@@ -51,7 +51,7 @@ Example vet_update:
 vet_update
 horse_id: EWING
 status: monitor
-date: 2026-06-01
+date: YYYY-MM-DD
 vet_status: scoped_clean
 notes:
 Scoped clean after galloping. Vet suspects old abscess burst rather than new bleeding episode. Mark to enter for 6/7 race if no more issues.
