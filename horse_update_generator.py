@@ -56,6 +56,7 @@ CRITICAL OUTPUT RULES:
 5. If a required field is missing, use unknown.
 6. ALL events except horse_added MUST include a notes: section.
 7. Output ONLY structured text. No markdown. No code fences. No explanations.
+8. If any owner or trainer details included in the text put those in the notes section. Do NOT create separate fields for owner or trainer names.
 
 DATE RULES:
 1. The date field should represent the date this update is being created/logged.
